@@ -23,7 +23,7 @@ Este codigo realiza la resolucion del metodo simplex tomando como base la lectur
 
   entre el cociente 
 
-![No se necontro imagen verifica Ruta.](C:\Users\chris\OneDrive\Documents\GitHub\java-labs\resurces\imagenes\tab2.png "Tabla cociente = 1.")
+![No se necontro imagen verifica Ruta.](https://raw.githubusercontent.com/christianjosuesis/Inv.Operaciones/84c16696b80781db88ac93c4ce286e5a71e129df/tab2.png "Tabla cociente = 1.")
 
 
   continuamos con la implementacion de la formula FA-(PF*FP) FA= Fila actual(valor de la fila actual), PF=Pivote de Fila(valor de la fila que  

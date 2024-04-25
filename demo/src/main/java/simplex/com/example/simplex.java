@@ -61,13 +61,14 @@ public class simplex {
         // Encuentra la columna pivote (la columna más negativa)
         int pivotCol = -1;
         double minValue = 0;
+        for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
-            if (tableau[m - 1][j] < minValue) {
-                minValue = tableau[m - 1][j];
+            if (tableau[i][j] < minValue) {
+                minValue = tableau[i][j];
                 pivotCol = j;
             }
         }
-
+    }
         // Si no hay columnas negativas, terminamos
         if (pivotCol == -1) {
             return;

@@ -9,7 +9,7 @@ Este codigo realiza la resolucion del metodo simplex tomando como base la lectur
   Posteriormente al leer,validar y extraer de los componentes se colocan en un arreglo bidimencional
 
   
-![No se necontro imagen verifica Ruta.](C:/Users/chris/OneDrive/Documents/GitHub/java-labs/resurces/imagenes/tab1.png "Tabla de inicio.")
+![No se necontro imagen verifica Ruta.]([C:/Users/chris/OneDrive/Documents/GitHub/java-labs/resurces/imagenes/tab1.png](https://raw.githubusercontent.com/christianjosuesis/Inv.Operaciones/84c16696b80781db88ac93c4ce286e5a71e129df/tab1.png) "Tabla de inicio.")
 
   al tener la informacion en el arreglo comenzamos buscando el valos mas bajo por columna para detectar la columna pivote, 
 

@@ -136,8 +136,8 @@ public class simplex {
             return;
         }
 
-        int numFilas = hoja.getLastRowNum() + 1; // Número de filas
-        int numColumnas = hoja.getRow(0).getLastCellNum(); // Número de columnas
+        int numFilas = hoja.getLastRowNum() + 1; // Número de filas getLastRowNum= devuelve el índice de la última fila, no el número total de filas
+        int numColumnas = hoja.getRow(0).getLastCellNum(); // Número de columnas getLastCellNum() = no devuelve el índice de la última celda, sino el número total de celdas
 
         int[][] datos = new int[numFilas][numColumnas];
         try {

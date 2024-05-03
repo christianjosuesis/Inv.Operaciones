@@ -3,7 +3,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Scanner;
-
+import java.util.Properties;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -123,19 +123,42 @@ public class simplex {
         printDoubleArray(m, n, tabla);
     }
     public static void main(String args[]) {
-        Scanner info = new Scanner(System.in);
+        Properties prop = new Properties();
+        FileInputStream input = null;
         FileInputStream lector = null;
         Workbook libro = null;
         Sheet hoja = null;
+
         try {
-            lector = new FileInputStream("C:/Users/chris/OneDrive/Documents/simplex.xlsx");
+            // Leer la ruta del archivo desde el archivo de propiedades
+            input = new FileInputStream("config.properties");
+            prop.load(input);
+            String rutaArchivo = prop.getProperty("rutaArchivo");
+
+            // Abrir el archivo Excel
+            lector = new FileInputStream(rutaArchivo);
             libro = new XSSFWorkbook(lector);
             hoja = libro.getSheetAt(0);
         } catch (IOException e) {
             System.out.println("Error al abrir el archivo de Excel.");
-            return;
+            return;// Detener la ejecución si no se puede abrir el archivo
+        } finally {
+            if (input != null) {
+                try {
+                    input.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (lector != null) {
+                try {
+                    lector.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
-
+        
         int numFilas = hoja.getLastRowNum() + 1; // Número de filas getLastRowNum= devuelve el índice de la última fila, no el número total de filas
         int numColumnas = hoja.getRow(0).getLastCellNum(); // Número de columnas getLastCellNum() = no devuelve el índice de la última celda, sino el número total de celdas
 
